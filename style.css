@@ -1,0 +1,81 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  border-radius: 6px;
+}
+body {
+  height: 100svh;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body:focus-within {
+  background-color: #aaa;
+}
+section {
+  width: min(90%, 1000px);
+  display: flex;
+  flex-direction: column;
+}
+section input {
+  box-shadow: -3px 3px 10px #aaa;
+  border: none;
+  padding: 1.5em;
+  background-color: #f1f5f7;
+  font-size: 2rem;
+  caret-color: #0000ff;
+}
+section input:focus {
+  outline: none;
+}
+@media (max-width: 28.75em) {
+  section input {
+    font-size: 1.3rem;
+  }
+}
+.progress {
+  margin-top: -10px;
+  width: 0;
+  height: 10px;
+  background-color: #00ff00;
+  border-top-left-radius: 0;
+  -webkit-transition: 450ms;
+  -moz-transition: 450ms;
+  -ms-transition: 450ms;
+  -o-transition: 450ms;
+  transition: 450ms;
+}
+.progress.zero {
+  border-top-right-radius: 0;
+  background-color: #ff0000;
+}
+.count-container {
+  align-self: flex-end;
+  margin-top: 1em;
+  text-align: center;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.count {
+  padding: 10px;
+  background-color: #000;
+  color: #00ff00;
+  -webkit-transition: 450ms;
+  -moz-transition: 450ms;
+  -ms-transition: 450ms;
+  -o-transition: 450ms;
+  transition: 450ms;
+}
+.count.zero {
+  color: #ff0000;
+}
