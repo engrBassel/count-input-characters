@@ -2,8 +2,6 @@ let input = document.querySelector("input"),
   progress = document.querySelector(".progress"),
   count = document.querySelector(".count");
 
-console.log(input.maxLength);
-
 count.textContent =
   input.maxLength < 10 ? `0${input.maxLength}` : input.maxLength;
 
